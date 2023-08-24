@@ -1,4 +1,4 @@
-import { LetDirective } from '@rx-angular/template/let';
+import { RxLet } from '@rx-angular/template/let';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -11,7 +11,7 @@ import { DOCUMENT } from '@angular/common';
 // TODO
 @Component({
   standalone: true,
-  imports: [LetDirective],
+  imports: [RxLet],
   selector: 'ct-list-share',
   templateUrl: './list-share.component.html',
   styleUrls: ['./list-share.component.scss'],

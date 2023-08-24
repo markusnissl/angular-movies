@@ -94,6 +94,11 @@ Clone and install the dependencies for `angular-movies` locally:
 - `npm run start:ssr:prod`: serve the project locally SSR for production
 - `npm run analyze:bundlesize`: bundle size analysis
 
+In case of an error, you may have to set the following environment variable:
+```
+export PUPPETEER_SKIP_DOWNLOAD='true'
+``` 
+
 ## Tech Stack
 
 Built with:

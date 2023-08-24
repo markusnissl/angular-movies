@@ -1,0 +1,17 @@
+import { Canvas, Meta, ArgsTable, Controls, Primary } from '@storybook/blocks';
+import * as HamburgerButtonStory from './hamburger-button.component.stories';
+import { HamburgerButtonComponent } from "./hamburger-button.component";
+
+
+
+<Meta of={HamburgerButtonStory} />
+
+# Hamburger Button
+
+The hamburger button is a button usually used to toggle the main navigation of a site.
+
+<Primary of={HamburgerButtonStory.Default} />
+
+<ArgsTable of={HamburgerButtonComponent} />
+
+<Controls />

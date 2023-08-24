@@ -70,3 +70,7 @@ body.dark img:not([src*='.svg']) {
     }
   }
 }
+
+body .docs-story {
+  background-color: var(--palette-background-default);
+}
