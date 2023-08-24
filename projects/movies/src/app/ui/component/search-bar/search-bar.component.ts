@@ -1,5 +1,5 @@
-import {RxState} from '@rx-angular/state';
-import {DOCUMENT} from '@angular/common';
+import { RxState } from '@rx-angular/state';
+import { DOCUMENT } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -10,11 +10,21 @@ import {
   ViewChild,
   ViewEncapsulation,
 } from '@angular/core';
-import {filter, fromEvent, map, merge, Observable, startWith, switchMap, take, withLatestFrom,} from 'rxjs';
-import {preventDefault, RxActionFactory} from '@rx-angular/state/actions';
-import {coerceObservable} from '@rx-angular/cdk/coercing';
-import {RxLet} from '@rx-angular/template/let';
-import {FastSvgComponent} from '@push-based/ngx-fast-svg';
+import {
+  filter,
+  fromEvent,
+  map,
+  merge,
+  Observable,
+  startWith,
+  switchMap,
+  take,
+  withLatestFrom,
+} from 'rxjs';
+import { preventDefault, RxActionFactory } from '@rx-angular/state/actions';
+import { coerceObservable } from '@rx-angular/cdk/coercing';
+import { RxLet } from '@rx-angular/template/let';
+import { FastSvgComponent } from '@push-based/ngx-fast-svg';
 
 type UiActions = {
   searchChange: string;
@@ -30,6 +40,7 @@ type UiActions = {
   template: `
     <form
       data-uf="q-form"
+      data-testid="q-form"
       (submit)="ui.formSubmit($event)"
       #form
       class="form"
@@ -118,7 +129,7 @@ export class SearchBarComponent {
     private state: RxState<{ search: string; open: boolean }>,
     private actions: RxActionFactory<UiActions>
   ) {
-    this.state.set({open: false});
+    this.state.set({ open: false });
     this.state.connect('search', this.ui.searchChange$.pipe(startWith('')));
     this.state.connect(
       'open',
